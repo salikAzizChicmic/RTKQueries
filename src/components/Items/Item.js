@@ -12,5 +12,4 @@ const Item = ({title,cat,description}) => {
    
   )
 }
-
 export default Item
