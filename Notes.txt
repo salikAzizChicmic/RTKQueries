@@ -1,0 +1,22 @@
+The createApi function takes three arguments:
+
+reducerPath: The name of the Redux reducer that will be used to manage the state of the API slice.
+baseQuery: A function that is used to make HTTP requests.
+endpoints: A function that is used to define the endpoints of the API slice.
+
+The endpoints function takes a builder object as an argument. The builder object can be used to define the following types of endpoints:
+
+query: A query endpoint is used to fetch data from the API.
+mutation: A mutation endpoint is used to modify data on the API.
+
+# Query Hook Return Values
+
+data - The latest returned result regardless of hook arg, if present.
+currentData - The latest returned result for the current hook arg, if present.
+error - The error result if present.
+isUninitialized - When true, indicates that the query has not started yet.
+isLoading - When true, indicates that the query is currently loading for the first time, and has no data yet. This will be true for the first request fired off, but not for subsequent requests.
+isFetching - When true, indicates that the query is currently fetching, but might have data from an earlier request. This will be true for both the first request fired off, as well as subsequent requests.
+isSuccess - When true, indicates that the query has data from a successful request.
+isError - When true, indicates that the query is in an error state.
+refetch - A function to force refetch the query
